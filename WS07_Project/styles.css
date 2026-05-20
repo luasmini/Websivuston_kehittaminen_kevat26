@@ -12,6 +12,7 @@
 }
 
 body {
+    background-color: black;
     background-image: url(images/bg-dog.png);
     background-size: cover;
     background-position: center;
