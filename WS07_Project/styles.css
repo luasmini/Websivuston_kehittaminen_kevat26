@@ -136,7 +136,7 @@ body {
     color: gold;
 }
 
-.section-text h2 {
+.section-text h1 {
     font-family: "Monoton", sans-serif;
     font-size: clamp(2rem, 4vw, 3.8rem);
     font-weight: 400;
@@ -205,7 +205,7 @@ body {
     opacity: 0.5;
 }
 
-.cards h3 {
+.cards h2 {
     font-size: clamp(1rem, 2vw, 2rem);
     font-weight: bold;
     line-height: 1.5;
@@ -274,7 +274,7 @@ body {
     padding-bottom: 60px;
 }
 
-.form-aside h2 {
+.form-aside h1 {
     font-family: "Monoton", sans-serif;
     font-size: clamp(2rem, 4vw, 3.8rem);
     font-weight: 400;
