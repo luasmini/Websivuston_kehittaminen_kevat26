@@ -1,0 +1,618 @@
+:root {
+    --pad: clamp(24px, 5vw, 64px);
+    --chunk-radius: 12px;
+    --gap: 20px;
+    --bs: 0 4px 60px 0 rgba(0, 0, 0, .37), inset 3px 3px .5px -3px hsla(0, 0%, 100%, .09), inset -3px -3px .5px -3px hsla(0, 0%, 100%, .25), inset 0 1px 0 0 hsla(0, 0%, 100%, .15), inset 0 0 6px 6px hsla(0, 0%, 100%, .12), inset 0 0 2px 2px hsla(0, 0%, 100%, .06), 0 0 12px hsla(0, 0%, 100%, .15);
+}
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-image: url(images/bg-dog.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: "Google Sans", sans-serif;
+    color: white;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    padding: var(--gap);
+}
+
+.chunk-hero {
+    height: calc(100vh - var(--gap) * 2);
+    background: rgba(255, 255, 255, 0.041);
+    border-radius: var(--chunk-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--pad);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--bs);
+    backdrop-filter: blur(8px);
+}
+
+.chunk-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.chunk-hero .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.chunk-hero h1 {
+    font-family: "Monoton", sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    line-height: 1;
+    font-weight: 400;
+    position: relative;
+    max-width: 24ch;
+}
+
+.chunk-hero h1 em {
+    opacity: 0.75;
+    color: gold;
+}
+
+.chunk-hero .hero-meta {
+    position: absolute;
+    top: var(--pad);
+    right: var(--pad);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.chunk-hero .hero-meta-b {
+    position: absolute;
+    bottom: var(--pad);
+    right: var(--pad);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.chunk-section {
+    background: rgba(255, 255, 255, 0.041);
+    border-radius: var(--chunk-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--pad);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--bs);
+    backdrop-filter: blur(8px);
+}
+
+.chunk-section--about {
+    justify-content: flex-start;
+}
+
+.chunk-section--services {
+    justify-content: flex-start;
+}
+
+.section-text {
+    padding: var(--pad);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap);
+    position: relative;
+}
+
+.section-text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.section-number {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    color: gold;
+}
+
+.section-text h2 {
+    font-family: "Monoton", sans-serif;
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1;
+    word-spacing: 10px;
+}
+
+.section-text p {
+    font-size: clamp(14px, 1.3vw, 17px);
+    line-height: 2;
+    opacity: 0.75;
+}
+
+.section-text .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    margin-top: var(--gap);
+}
+
+.tag {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: clamp(14px, 1.3vw, 17px);
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.chunk-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.cards {
+    background: rgba(255, 255, 255, 0.041);
+    border-radius: var(--chunk-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--bs);
+    backdrop-filter: blur(8px);
+}
+
+.cards::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    padding: var(--pad);
+}
+
+.card-index {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.cards h3 {
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.cards p {
+    font-size: clamp(14px, 1.3vw, 17px);
+    line-height: 2;
+    opacity: 0.75;
+}
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--pad);
+}
+
+.card-cta {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    text-decoration: none;
+    color: gold;
+    opacity: 0.75;
+}
+
+.chunk-form {
+    background: rgba(255, 255, 255, 0.041);
+    border-radius: var(--chunk-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--pad);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--bs);
+    backdrop-filter: blur(8px);
+}
+
+.form-aside {
+    padding: var(--pad);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-aside::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.form-aside-top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.form-aside h2 {
+    font-family: "Monoton", sans-serif;
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1;
+    word-spacing: 10px;
+}
+
+.form-aside p {
+    font-size: clamp(14px, 1.3vw, 17px);
+    line-height: 2;
+    opacity: 0.75;
+}
+
+.form-aside-bottom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.form-contact-line {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.form-contact-line span {
+    display: block;
+    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    text-transform: none;
+    margin-top: 8px;
+    color: gold;
+}
+
+.form-body {
+    padding: var(--pad);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.field input, .field select, .field textarea {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.field textarea {
+    resize: none;
+    line-height: 1.6;
+}
+
+.field textarea.short {
+    height: 90px;
+}
+
+.field textarea.long {
+    height: 160px;
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+.field textarea, input, select, button {
+    font-family: inherit;
+}
+
+.field input::placeholder {
+    font-family: "Google Sans", sans-serif;
+}
+
+.field textarea::placeholder {
+    font-family: "Google Sans", sans-serif;
+}
+
+.form-submit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.form-note {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.btn-submit {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-submit:hover {
+    background: rgba(255, 255, 255, 0.01);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: var(--bs);
+}
+
+.btn-submit:active {
+    background: gold;
+    opacity: 0.75;
+    color: black;
+    box-shadow: var(--bs);
+}
+
+@media (max-width: 768px) {
+    .chunk-form {grid-template-columns: 1fr;}
+    .form-row {grid-template-columns: 1fr;}
+    .chunk-section {grid-template-columns: 1fr;}
+    .chunk-cards {grid-template-columns: 1fr;}
+    .card {grid-template-columns: 1fr;}
+}
+
+.accordion {
+    background: transparent !important;
+    border: none !important;
+}
+
+.accordion-button {
+    background: transparent !important;
+    color: white !important;
+    font-size: clamp(0.8rem, 1.6vw, 1.3rem);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    box-shadow: none !important;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='1.5' d='M2 5l6 6 6-6'/%3E%3C/svg%3E") !important;
+}
+
+.accordion-item {
+    border: none !important;
+    background: transparent;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.service-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.service-row:has(.service-note) {
+    grid-template-columns: 1fr;
+}
+
+.service-note {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: clamp(14px, 1.3vw, 17px);
+    font-style: italic;
+}
+
+.service-name {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: clamp(14px, 1.3vw, 17px);
+}
+
+.service-price {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: clamp(14px, 1.3vw, 17px);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.nav {
+    position: sticky;
+    background: rgba(255, 255, 255, 0.041);
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.nav-inner {
+    max-width: 1600px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 1vw, 1.5rem);
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;   
+    padding: 0.5rem 0.75rem;
+    font-size: clamp(0.75rem, 0.9vw, 1.05rem);
+    font-weight: 400;
+    color: gold;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.menu a:hover {
+    text-shadow: 0 0 10px white;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    width: clamp(40px, 6vw, 45px);
+    height: clamp(40px, 6vw, 45px);
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.356);
+    background:  rgba(0, 0, 0, 1);
+    box-shadow: var(--bs);
+    cursor: pointer;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: gold;
+    opacity: 0.75;
+    position: relative;
+    content: "";
+    transform-origin: center;
+}
+
+.hamburger span::before {
+    position: absolute;
+    top: -6px;
+}
+
+.hamburger span::after {
+    position: absolute;
+    top: 6px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+        padding-top: 1.3rem;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background: rgba(0, 0, 0, 1);
+        box-shadow: var(--bs);
+        border-radius: var(--chunk-radius);
+        backdrop-filter: blur(8px);
+        max-height: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    .menu li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .menu li a {
+        padding: 10px 0;
+    }
+
+    .menu-toggle:checked~.menu {
+        max-height: 500px;
+        padding: 1.5rem 0;
+        pointer-events: auto;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu-toggle:checked~.hamburger span {
+        background: transparent;
+    }
+
+    .menu-toggle:checked~.hamburger span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle:checked~.hamburger span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}

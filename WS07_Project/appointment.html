@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+    <html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Eläinlääkäri X</title>
+        <link rel="icon" href="images/logoX.png">
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="nav">
+            <div class="nav-inner">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label class="hamburger" for="menu-toggle">
+                    <span></span>
+                </label>
+
+                <ul class="menu">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="services.html">Palveluhinnasto</a></li>
+                    <li><a href="appointment.html">Ajanvaraus</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="page">
+
+
+            <section class="chunk-form" id="appointment">
+
+                <div class="form-aside">
+                    <div class="form-aside-top">
+                        <span class="section-number">03 - Ajanvaraus</span>
+                        <h2>Varaa aika</h2>
+                        <p>Täytä pyydetyt tiedot lomakkeeseen ja me palaamme sinulle mahdollisimman pian.</p>
+                    </div>
+                    <div class="form-aside-bottom">
+                        <div class="form-contact-line">
+                            Voit tarvittaessa ottaa suoraan yhteyttä sähköpostitse
+                            <span>tiedustelut@ellx.com</span>
+                        </div>
+                        <div class="form-contact-line">
+                            Tai soittaa meille
+                            <span>0512345678</span>
+                        </div>
+                        <div class="form-contact-line">
+                            Palvelemme osoitteessa
+                            <span>Esimerkkikatu 1, 00100 Helsinki</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-body">
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label>Etunimi</label>
+                            <input type="text" placeholder="Erkki">
+                        </div>
+                        <div class="field">
+                            <label>Sukunimi</label>
+                            <input type="text" placeholder="Esimerkki">
+                        </div>                        
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label>Sähköposti</label>
+                            <input type="email" placeholder="erkki@esimerkki.com">
+                        </div>
+                        <div class="field">
+                            <label>Puhelin</label>
+                            <input type="tel" placeholder="0400000000">
+                        </div>                                                          
+                    </div>
+
+                    <div class="field">
+                        <label>Otsikko</label>
+                        <textarea class="short" placeholder="Lyhyt kuvaus tarpeesta"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label>Kuvaus</label>
+                        <textarea class="long" placeholder="Kuvaile eläimesi tarvetta mahdollisimman tarkasti. Kaikki esitieto auttaa meitä paremmin kartoittamaan hoitotarpeen etukäteen. Kysymykset ovat myös tervetulleita."></textarea>
+                    </div>
+
+                    <div class="form-submit-row">
+                        <span class="form-note">Vastaamme yleensä noin 1-2 arkipäivän sisään.</span>
+                        <button class="btn-submit">Lähetä lomake →</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
